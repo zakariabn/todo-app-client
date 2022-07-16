@@ -15,7 +15,7 @@ const TodoViewArea = () => {
         <Todo />
 
         {/* complied todo task render */}
-        <h4 className="text-xl font-medium mt-10 border-l-2 pl-4">Complied Todo's</h4>
+        <h4 className="text-xl font-medium mt-10 mb-5 border-l-2 pl-4">Complied Todo's</h4>
         <CompliedTodo/>
 
         <span className="absolute bottom-5 right-5">

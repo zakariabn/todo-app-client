@@ -2,7 +2,7 @@ import { format, parseISO } from "date-fns";
 import React from "react";
 import axiosPrivet from "../../api/AxiosPrivet";
 
-const SingleTodo = ({ todo, selectedTodo, refetch }) => {
+const SingleTodo = ({ todo, selectedTodo, refetch, refetchComplied }) => {
   const { _id, date, description, title, } = todo;
 
   const formattedDate = (d) => {
@@ -25,6 +25,7 @@ const SingleTodo = ({ todo, selectedTodo, refetch }) => {
     axiosPrivet.put(`/todo/${id}?status=complied`).then((res) => {
       console.log(res.data);
       refetch();
+      refetchComplied();
     });
   }
 
