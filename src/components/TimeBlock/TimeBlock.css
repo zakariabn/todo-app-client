@@ -1,0 +1,59 @@
+.time-block-container {
+  display: flex;
+  justify-content: center;
+}
+
+.time-box {
+  width: 450px;
+  height: 800px;
+  padding: 0.5rem;
+  position: relative;
+  background-color: #e2e2e2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(24, 1fr) ;
+  border-radius: 0.1rem;
+}
+
+.time-box > span {
+  padding: .2rem;
+}
+
+.time-box > span:nth-child(1) {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.time-box > span:nth-last-child(1) {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.time-box > span:nth-child(even) {
+  background-color: #c1c1c1;
+}
+
+.time-box > span:nth-child(odd) {
+  background-color: #fff;
+}
+
+.time-block {
+  content: '';
+  padding:  0.5rem .2rem;
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(96, 1fr) ;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.time-block > span {
+  background-color: #fff;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
