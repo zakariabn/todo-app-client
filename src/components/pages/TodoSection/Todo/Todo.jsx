@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { useGetTodoActive, useGetTodoComplied } from "../../../../hooks/useGetTodo";
 import SingleTodo from "./SingleTodo";
-import { useGetTodoActive, useGetTodoComplied } from "../../hooks/useGetTodo";
 
 const Todo = () => {
   const [startDate, setStartDate] = useState(new Date());

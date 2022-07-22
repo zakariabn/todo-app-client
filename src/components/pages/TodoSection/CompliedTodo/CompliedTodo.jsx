@@ -1,11 +1,11 @@
 import React from "react";
-import { useGetTodoComplied } from "../../hooks/useGetTodo";
-import SingleTodo from "../Todo/SingleTodo";
+import { useGetTodoComplied } from "../../../../hooks/useGetTodo";
+import CompliedSingleTodo from "./CompliedSingleTodo";
 
 const CompliedTodo = () => {
   const [isLoading, error, data, refetch] = useGetTodoComplied();
 
-// query error and loading handling
+  // query error and loading handling
   if (error) {
     console.log(error);
   }
@@ -16,7 +16,7 @@ const CompliedTodo = () => {
   return (
     <div>
       {data?.result?.map((todo, i) => (
-        <SingleTodo key={todo._id} todo={todo} refetch={refetch} />
+        <CompliedSingleTodo key={todo._id} todo={todo} refetch={refetch} />
       ))}
     </div>
   );

@@ -8,7 +8,9 @@
   height: 800px;
   padding: 0.5rem;
   position: relative;
-  background-color: #e2e2e2;
+  /* background-color: #e2e2e2; */
+  @apply bg-base-300;
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(24, 1fr) ;
@@ -28,16 +30,19 @@
 }
 
 .time-box > span:nth-child(even) {
-  background-color: #c1c1c1;
+  /* background-color: #c1c1c1; */
+  @apply bg-secondary
 }
 
 .time-box > span:nth-child(odd) {
-  background-color: #fff;
+  /* background-color: #fff; */
+  @apply bg-primary
 }
 
 .time-block {
   content: '';
   padding:  0.5rem .2rem;
+  margin-right: 0.3rem;
   width: 85%;
   height: 100%;
   position: absolute;
@@ -46,12 +51,13 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(96, 1fr) ;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   z-index: 10;
 }
 
 .time-block > span {
-  background-color: #fff;
+  @apply bg-neutral text-white;
+  
   border-radius: .5rem;
   display: flex;
   justify-content: center;

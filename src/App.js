@@ -1,13 +1,13 @@
 import React from "react";
-import TodoViewArea from "./components/TodoViewArea/TodoViewArea";
 import "./App.css";
 import Header from "./components/Header/Header";
+import ViewArea from "./components/ViewArea/ViewArea";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <TodoViewArea />
+      <ViewArea />
     </div>
   );
 }

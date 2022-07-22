@@ -1,0 +1,3 @@
+.btn-xs {
+  @apply px-1.5;
+}
