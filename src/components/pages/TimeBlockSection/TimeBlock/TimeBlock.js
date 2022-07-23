@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from "react";
-import axiosPrivet from "../../../../api/AxiosPrivet";
+import React from "react";
+import { useGetTodoActive } from "../../../../hooks/useGetTodo";
 import SingleBlock from "../SingleBlock/SingleBlock";
 import "./TimeBlock.css";
 
 const TimeBlock = () => {
-  const [todo, setTodo] = useState([]);
+  const [isLoading, error, data, refetch] = useGetTodoActive();
 
-  useEffect(() => {
-    axiosPrivet.get("/todo?status=active&status=active").then((res) => {
-      // console.log(res.data.result);
-      setTodo(res.data.result);
-    });
-  }, []);
-
-  console.log(todo);
 
   return (
     <div className="time-block-container">
@@ -94,7 +86,7 @@ const TimeBlock = () => {
         </>
 
         <div className="time-block">
-          {todo?.map((td) => (
+          {data?.result?.map((td) => (
             <SingleBlock key={td._id} time={td.time} title={td.title} status={td.status} />
           ))}
         </div>

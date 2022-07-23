@@ -53,9 +53,19 @@ const SingleBlock = ({ time, title }) => {
   }
 
   function getEndTimeBlock() {
-    const start = removeZero(startHour);
-    const end = removeZero(endHour);
-    console.log(end - start);
+    let start = removeZero(startHour);
+    let end = removeZero(endHour);
+
+    if (startAmPM === "pm") {
+      start = parseInt(start) + 12;
+      // console.log(typeof(n));
+    }
+    if (endAmPM === "pm") {
+      end =  parseInt(end) + 12;
+      // console.log(typeof(n));
+    }
+    
+    console.log(end - start, end, start ,"end block");
     return end - start;
   }
 

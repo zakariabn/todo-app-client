@@ -60,11 +60,12 @@ const TodoInput = () => {
     ) {
       e.target.value = "" + e.target.value + ":";
     } else if (
-      e.target.value.length === 5 &&
+      e.target.value.length >= 5 &&
       !(e.key === "Backspace" || e.key === "Delete")
-    ) {
-      document.getElementById("time-end-input").focus();
+      ) {
       e.preventDefault();
+      e.target.blur();
+      document.getElementById("time-end-input").focus();
     }
     console.log(e.target.value);
 
