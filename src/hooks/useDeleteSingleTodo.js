@@ -6,6 +6,10 @@ const useDeleteSingleTodo = () => {
     useGetTodoActive();
   const [isLoadingComplied, errorComplied, dataComplied, refetchComplied] =
     useGetTodoComplied();
+  
+  if (isLoadingActive || isLoadingComplied) {
+    return <p>loading...</p>
+  }
 
   function handelDelete(id) {
     axiosPrivet.delete(`/todo/${id}`).then((res) => console.log(res.message));

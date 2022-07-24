@@ -28,7 +28,7 @@ const SingleTodo = ({ todo, selectedTodo, refetch, refetchComplied }) => {
   function handelTaskCompiled(id, isChecked) {
     // demo req url http://localhost:5000/todo/62d2e11892627d07ee210755?status=complied
     axiosPrivet.put(`/todo/${id}?status=complied`).then((res) => {
-      console.log(res.data);
+      
       refetch();
       refetchComplied();
     });

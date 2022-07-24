@@ -2,6 +2,9 @@ import { useSpring, animated } from "@react-spring/web";
 import React from "react";
 
 const SingleBlock = ({ time, title }) => {
+
+  // console.log(time);
+  
   const start = time[0].start[0];
   const startHour = parseInt(start.split(":")[0]);
   const startMinute = parseInt(start.split(":")[1]);
@@ -27,7 +30,7 @@ const SingleBlock = ({ time, title }) => {
 
     if (startAmPM === "pm") {
       return parseInt(startGrid) + 12;
-      // console.log(typeof(n));
+      
     }
 
     return startGrid;
@@ -58,14 +61,14 @@ const SingleBlock = ({ time, title }) => {
 
     if (startAmPM === "pm") {
       start = parseInt(start) + 12;
-      // console.log(typeof(n));
+      
     }
     if (endAmPM === "pm") {
       end =  parseInt(end) + 12;
-      // console.log(typeof(n));
+      
     }
     
-    console.log(end - start, end, start ,"end block");
+    
     return end - start;
   }
 

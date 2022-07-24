@@ -87,7 +87,7 @@ const TimeBlock = () => {
 
         <div className="time-block">
           {data?.result?.map((td) => (
-            <SingleBlock key={td._id} time={td.time} title={td.title} status={td.status} />
+            <SingleBlock key={td._id} time={td?.time} title={td?.title} status={td?.status} />
           ))}
         </div>
       </div>

@@ -2,7 +2,7 @@ import axios from "axios";
 
 const axiosPrivet = axios.create({
   // production server
-  // baseURL: "http://localhost:5000/",
+  // baseURL: "https://todo-time-block.herokuapp.com/",
 
   // development server
   baseURL: "http://localhost:5000/",

@@ -9,6 +9,8 @@ const Todo = () => {
   const [isLoadingComplied, errorComplied, dataComplied, refetchComplied] = useGetTodoComplied();
 
 
+  console.log("Data", data);
+
   // query error and loading handling
   if (error) {
     console.log(error);
@@ -26,7 +28,6 @@ const Todo = () => {
     }
   }
 
-  // console.log(todo);
   return (
     <div className="relative">
       {data?.result.length <= 0

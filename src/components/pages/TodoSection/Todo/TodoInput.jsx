@@ -26,9 +26,6 @@ const TodoInput = () => {
     },
   });
 
-  useEffect(() => {
-    console.log(time);
-  }, [time]);
 
   function handelNewTodo(e) {
     e.preventDefault();
@@ -67,7 +64,7 @@ const TodoInput = () => {
       e.target.blur();
       document.getElementById("time-end-input").focus();
     }
-    console.log(e.target.value);
+    
 
     if (formatValidation.test(e.target.value)) {
       setTime({...time, start: {t: e.target.value, amPm: amPmStart}});
